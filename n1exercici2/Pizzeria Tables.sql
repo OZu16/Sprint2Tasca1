@@ -53,10 +53,10 @@ CREATE TABLE delivery_man (
     FOREIGN KEY (id_delivery_man) REFERENCES employee(id_employee)
 );
 
-CREATE TABLE cook (
-	id_cook int NOT NULL,
-    PRIMARY KEY (id_cook),
-    FOREIGN KEY (id_cook) REFERENCES employee(id_employee)
+CREATE TABLE `cook`(
+	`id_cook` int NOT NULL,
+    PRIMARY KEY (`id_cook`),
+    FOREIGN KEY (`id_cook`) REFERENCES employee(id_employee)
 );
 
 CREATE TABLE product (
@@ -69,11 +69,12 @@ CREATE TABLE product (
 );
 
 CREATE TABLE `product_cook` (
-  `product_cook` integer NOT NULL,
-  `cook_employee_id` integer NOT NULL,
-  PRIMARY KEY (`product_cook`, `cook_employee_id`),
-  FOREIGN KEY (`cook_employee_id`) REFERENCES `cook` (`id_cook`),
-  FOREIGN KEY (`product_cook`) REFERENCES product (`id_product`)
+  `id_product_cook` int NOT NULL,
+  `cook` int NOT NULL,
+  `product` int NOT NULL,
+  PRIMARY KEY (`id_product_cook`),
+  FOREIGN KEY (`cook`) REFERENCES `cook`(`id_cook`),
+  FOREIGN KEY (`product`) REFERENCES `product`(`id_product`)
 );
 
 

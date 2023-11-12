@@ -53,14 +53,14 @@ INSERT INTO product (id_product, `name`, `description`, image, price) VALUES
 	(5, 'pizza vegana', 'vegana', NULL, 9.99),
 	(6, 'zumo de piña', 'zumito fresquito', NULL, 2.99);
 
-INSERT INTO product_cook (product_cook, cook_employee_id) VALUES
-	(1, 2),
-	(1, 5),
-    (2, 5),
-    (3, 5),
-    (4, 5),
-    (5, 2),
-    (6, 6);
+INSERT INTO product_cook (`id_product_cook`, `product`, `cook`) VALUES
+	(1, 1, 2),
+	(2, 1, 5),
+    (3, 2, 5),
+    (4, 3, 5),
+    (5, 4, 5),
+    (6, 5, 2),
+    (7, 6, 6);
 
 INSERT INTO hamburger (id_product, `name`) VALUES
 	(1, 'hamburgesa');
