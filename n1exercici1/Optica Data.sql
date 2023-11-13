@@ -1,12 +1,12 @@
-INSERT INTO agent (id, name, city, cp, tel, mail, tipe)
+INSERT INTO agent (id, `name`, street, `number`, door, city, cp, tel, country, mail, `type`)
 VALUES
-    (1, 'manolo', 'bcn', 08018, 645424427, 'manolo@gmail.com', 'client'),
-    (2, 'paca', 'bcn', 08524, 589531452, 'paca@gmail.com', 'client'),
-    (3, 'javi', 'tarragona', 99999, 586321452, 'javi@gmail.com', 'employee'),
-    (4, 'marc', 'sevilla', 63489, 66666666, 'marc@gmail.com', 'employee'),
-    (5, 'nunito', 'SI', 11111, 789632569, 'nunito@gmail.com', 'supplier'),
-    (6, 'antonio', 'bcn', 69825, 645826637, 'antonio@gmail.com', 'supplier'),
-    (7, 'oriol', 'bcn', 61617, 648964732, 'oriol@gmail.com', 'supplier');
+    (1, 'manolo', 'Gran Vía', 9, 2, 'bcn', 08018, 645424427, 'spain', 'manolo@gmail.com', 'client'),
+    (2, 'paca', 'Avenida de la Alameda', 3, 139, 'bcn', 08524, 589531452, 'spain', 'paca@gmail.com', 'client'),
+    (3, 'javi', 'Paseo del Prado', 8, 1, 'tarragona', 99999, 586321452, 'spain', 'javi@gmail.com', 'employee'),
+    (4, 'marc', 'Plaza Mayor', 6, 3, 'sevilla', 63489, 66666666, 'spain', 'marc@gmail.com', 'employee'),
+    (5, 'nunito', 'Carrer de la Rambla', 9, 2, 'bcn', 11111, 789632569, 'spain', 'nunito@gmail.com', 'supplier'),
+    (6, 'antonio', 'Calle de la Puerta del Sol', 32, 4, 'madrid', 69825, 645826637, 'spain', 'antonio@gmail.com', 'supplier'),
+    (7, 'oriol', 'Avenida de la Castellana', 96, 2, 'bcn', 61617, 648964732, 'spain', 'oriol@gmail.com', 'supplier');
 INSERT INTO client (id, register_date, referred)
 VALUES
     (1, '2023-01-01 10:00:00', null),

@@ -1,11 +1,15 @@
 CREATE TABLE agent (
 	id int NOT NULL,
     `name` varchar(255) NOT NULL,
+    street varchar(255) NOT NULL,
+    `number` int NOT NULL,
+    door varchar(255) NOT NULL,
     city varchar(255) NOT NULL,
     cp int NOT NULL,
+    country varchar(255) NOT NULL,
     tel int NOT NULL,
     mail varchar(255) NOT NULL,
-    tipe ENUM('client', 'employee', 'supplier') NOT NULL,
+    `type` ENUM('client', 'employee', 'supplier') NOT NULL,
     PRIMARY KEY (id)
     );
     
