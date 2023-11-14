@@ -47,11 +47,11 @@ CREATE TABLE `suscription` (
 );
 
 CREATE TABLE `like_dislike_video` (
-  `like_dislike_video_id` int PRIMARY KEY NOT NULL,
-  `tipe` ENUM("like", "dislike") NOT NULL,
+  `type` ENUM("like", "dislike") NOT NULL,
   `like_dislike_date` timestamp NOT NULL,
   `user` int NOT NULL,
-  `video` int NOT NULL
+  `video` int NOT NULL,
+  PRIMARY KEY (`user`, `video`)
 );
 
 CREATE TABLE `playlist` (
@@ -63,9 +63,9 @@ CREATE TABLE `playlist` (
 );
 
 CREATE TABLE `video_playlist` (
-  `video_playlist_id` int PRIMARY KEY NOT NULL,
   `video` int NOT NULL,
-  `playlist` int NOT NULL
+  `playlist` int NOT NULL,
+  PRIMARY KEY (`video`, `playlist`)
 );
 
 CREATE TABLE `comment` (
@@ -77,11 +77,11 @@ CREATE TABLE `comment` (
 );
 
 CREATE TABLE `like_dislike_comment` (
-  `like_dislike_comment_id` int PRIMARY KEY NOT NULL,
   `tipe` ENUM("like", "dislike") NOT NULL,
   `like_dislike_date` timestamp NOT NULL,
   `user` int NOT NULL,
-  `comment` int NOT NULL
+  `comment` int NOT NULL,
+  PRIMARY KEY (`user`, `comment`)
 );
 
 ALTER TABLE `video` ADD FOREIGN KEY (`user`) REFERENCES `user` (`user_id`);

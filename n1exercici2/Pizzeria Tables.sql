@@ -69,10 +69,9 @@ CREATE TABLE product (
 );
 
 CREATE TABLE `product_cook` (
-  `id_product_cook` int NOT NULL,
   `cook` int NOT NULL,
   `product` int NOT NULL,
-  PRIMARY KEY (`id_product_cook`),
+  PRIMARY KEY (`cook`, `product`),
   FOREIGN KEY (`cook`) REFERENCES `cook`(`id_cook`),
   FOREIGN KEY (`product`) REFERENCES `product`(`id_product`)
 );
